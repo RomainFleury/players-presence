@@ -1,0 +1,50 @@
+{
+  "name": "playersPresence",
+  "version": "1.0.0",
+  "description": "Players presence manager",
+  "main": "Gruntfile.js",
+  "homepage": "http://presence.parseapp.com",
+  "directories": {
+    "root": "./",
+    "application_dev": "public_dev",
+    "application_prod": "public",
+    "bower_files": "bower_components",
+    "styles_dev": "public_dev/styles",
+    "scripts_dev": "public_dev/scripts",
+    "images_dev": "public_dev/images",
+    "tmp": "./.tmp",
+    "styles_prod": "public",
+    "scripts_prod": "public/scripts",
+    "images_prod": "public/images"
+  },
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-karma": "^0.10.1",
+    "grunt-cli": "^0.1.13",
+    "karma": "^0.12.31"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.8.0",
+    "grunt": "^0.4.5",
+    "grunt-angular-templates": "^0.5.7",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-cssmin": "^0.12.2",
+    "grunt-contrib-uglify": "^0.8.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-env": "^0.4.2",
+    "grunt-eslint": "^5.0.0",
+    "grunt-filerev": "^2.2.0",
+    "grunt-notify": "^0.4.1",
+    "grunt-preprocess": "^4.1.0",
+    "grunt-usemin": "^3.0.0",
+    "load-grunt-tasks": "^3.1.0",
+    "time-grunt": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Romain Fleury"
+}

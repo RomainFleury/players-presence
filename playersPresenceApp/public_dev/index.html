@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Players Presence</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable = no">
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes"><link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/icons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/icons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/icons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/icons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/icons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="images/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/icons/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="images/icons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="images/icons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="images/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="images/icons/manifest.json">
+    <link rel="shortcut icon" href="images/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#00a300">
+    <meta name="msapplication-TileImage" content="/images/icons/mstile-144x144.png">
+    <meta name="msapplication-config" content="/images/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/images/mstile-144x144.png">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- build:css styles/app.min.css -->
+    <link rel="stylesheet" href="styles/app.css">
+    <!-- endbuild -->
+
+    <!-- build:css styles/vendor.min.css -->
+    <!--<link rel="stylesheet" href="https://rawgit.com/angular/bower-material/master/angular-material.css">-->
+    <link rel="stylesheet" href="scripts/libs/bower_components/angular-material/angular-material.min.css">
+
+    <!--<link rel="stylesheet" href="/maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="scripts/libs/bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- endbuild -->
+</head>
+
+<body ng-app="playersPresence" class="noselect">
+
+
+    <div id="home-loading" ng-hide="true" layout-fill>
+        Chargement en cours...
+    </div>
+    <div class="fill" ng-controller="appController as app">
+        <login ng-if="!app.loggedIn"></login>
+        <app-content ng-if="app.loggedIn"></app-content>
+    </div>
+
+    <!-- build:js js/vendor.js -->
+    <script src="scripts/libs/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="scripts/libs/bower_components/parse-js-sdk/lib/parse.min.js"></script>
+
+    <!-- Angular Material Dependencies -->
+    <script src="scripts/libs/bower_components/angular/angular.min.js"></script>
+    <script src="scripts/libs/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="scripts/libs/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="scripts/libs/bower_components/angular-route/angular-route.min.js"></script>
+
+    <!-- Angular Material Javascript using RawGit to load directly from `bower-material/master` -->
+    <script src="scripts/libs/bower_components/angular-material/angular-material.min.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js js/app.js -->
+    <script src="scripts/app/players.js"></script>
+    <script src="scripts/app/parse-players.js"></script>
+    <script src="scripts/app/app.js"></script>
+    <script src="scripts/app/directive_login.js"></script>
+    <script src="scripts/app/directive_menu.js"></script>
+    <script src="scripts/app/players_list.js"></script>
+    <script src="scripts/app/user_service/module.js"></script>
+    <!-- endbuild -->
+
+</body>
+
+</html>

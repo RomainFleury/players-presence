@@ -1,0 +1,39 @@
+<div layout="column" ng-init="playersList.init()">
+
+    <div class="page-statics">
+
+    </div>
+
+    <div class="page-content" flex>
+        <section class="players-list-tiles">
+
+            <div ng-hide="true" class="player-tile" ng-repeat="player in playersList.Players | orderBy:id"
+                 ng-class="{'present':player.present,'noresponse':player.noresponse}"
+                 ng-click="playersList.togglePresence(player)">
+                {{player.name}}
+            </div>
+
+            <md-grid-list
+                    md-cols-sm="2" md-cols-md="4" md-cols-gt-md="6"
+                    md-row-height-gt-md="1:1" md-row-height="2:2"
+                    md-gutter="12px" md-gutter-gt-sm="8px">
+                <md-grid-tile ng-repeat="player in playersList.Players"
+                              ng-class="{'notpresent':!player.present, 'present':player.present,'noresponse':player.noresponse, 'changing':player.changing}"
+                              ng-click="playersList.togglePresence(player)"
+
+                              md-ink-ripple="true"
+                        >
+                    <h3>{{player.name}}<br>
+                        <span class="icon-player">
+                            <i ng-class="{'fa-spin fa-circle-o-notch':player.changing, 'fa-check':player.present, 'fa-times':!player.present}" class="icon-player-status-tile fa"></i>
+                        </span>
+                    </h3>
+                    <md-grid-tile-footer class="remove-player-swipe-left" onclick="event.stopPropagation()"
+                            md-swipe-left="playersList.confirmRemove($event, player)">
+                        <i class="fa fa-chevron-left"></i>&nbsp;<i class="fa fa-trash-o"></i>
+                    </md-grid-tile-footer>
+                </md-grid-tile>
+
+        </section>
+    </div>
+</div>

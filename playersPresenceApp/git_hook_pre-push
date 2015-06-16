@@ -1,0 +1,99 @@
+#!/bin/sh
+
+# An example hook script to verify what is about to be pushed.  Called by "git
+# push" after it has checked the remote status, but before anything has been
+# pushed.  If this script exits with a non-zero status nothing will be pushed.
+#
+# This hook is called with the following parameters:
+#
+# $1 -- Name of the remote to which the push is being done
+# $2 -- URL to which the push is being done
+#
+# If pushing without using a named remote those arguments will be equal.
+#
+# Information about the commits which are being pushed is supplied as lines to
+# the standard input in the form:
+#
+#   <local ref> <local sha1> <remote ref> <remote sha1>
+#
+# This sample shows how to prevent push of commits where the log message starts
+# with "WIP" (work in progress).
+
+remote="$1"
+url="$2"
+
+echo "=================================================================="
+echo "Start 'pre-push' script from '.git/hooks/'"
+echo "=================================================================="
+
+
+echo ".................................................................."
+echo "=> Prepare environment for parse production"
+echo "------------------------------------------------------------------"
+cd playersPresenceApp
+
+
+echo " "
+echo "-----------------------------------------"
+echo "=> Prepare grunt execution => 'npm install'"
+echo "-----------------------------------------"
+npm install
+echo "-----------------------------------------"
+echo "=> Npm install done"
+echo "-----------------------------------------"
+echo " "
+
+echo "-----------------------------------------"
+echo "=> Grunt Build task => 'grunt build'"
+echo "-----------------------------------------"
+echo " "
+echo " "
+grunt build
+echo " "
+
+echo "-----------------------------------------"
+echo "=> Grunt Build task done"
+echo "-----------------------------------------"
+echo "------"
+echo "Public Version Built by grunt : "
+echo "------"
+tree public
+echo "------"
+cd ..
+echo "------------------------------------------------------------------"
+echo "=> Environment ready for parse production end"
+echo ".................................................................."
+echo " "
+
+echo ".................................................................."
+echo "=> Parse Deploy start"
+echo "------------------------------------------------------------------"
+cd playersPresenceApp
+parse deploy
+cd ..
+echo "------------------------------------------------------------------"
+echo "=> Parse Deploy end"
+echo ".................................................................."
+
+
+echo ".................................................................."
+echo "------"
+echo "Remove public folder with grunt"
+echo "------"
+grunt clean:public
+echo "------"
+echo "Directory list : "
+echo "------"
+ls -Glrth playersPresenceApp
+
+
+echo ".................................................................."
+
+
+
+
+echo "=================================================================="
+echo "End 'pre-push' script from '.git/hooks/'"
+echo "=================================================================="
+
+exit 0

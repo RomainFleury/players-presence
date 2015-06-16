@@ -1,0 +1,27 @@
+{
+  "name": "playersPresence",
+  "version": "0.5.0",
+  "authors": [
+    "Romain Fleury <fleury@romain.in>"
+  ],
+  "description": "Manage your players",
+  "main": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.15",
+    "angular-animate": "~1.3.15",
+    "angular-aria": "~1.3.15",
+    "angular-material": "~0.9.4",
+    "angular-route": "~1.3.15",
+    "jquery": "~2.1.4",
+    "parse-js-sdk": "~1.4.2",
+    "font-awesome": "~4.3.0"
+  }
+}

@@ -1,0 +1,36 @@
+<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+    <md-toolbar class="md-theme-indigo">
+        <h1 class="md-toolbar-tools "> Menu </h1>
+    </md-toolbar>
+    <md-content flex="" layout="column" id="menu-buttons-container">
+        <!--
+    	<md-button class="md-primary" aria-label="Accueil" ng-href="#/" ng-click="appContent.toggleTab()">Accueil</md-button>
+        <md-divider></md-divider>
+        -->
+        <md-button class="md-primary" aria-label="Liste des patients" ng-href="#/players"
+                   ng-click="appContent.toggleTab()">Liste des joueurs
+        </md-button>
+        <form name="addPlayerForm" layout="row" layout-padding>
+            <md-input-container>
+                <label>Ajouter un joueur</label>
+                <input name="name" ng-model="menu.player.name" ng-required="true" ng-minlength="3"/>
+            </md-input-container>
+            <md-button class="md-primary" ng-class="{'md-raised':addPlayerForm.name.$valid}"
+                       ng-disabled="addPlayerForm.name.$invalid" aria-label="Ajouter un joueur"
+                       ng-click="menu.addPlayer();"><i class="fa fa-plus"></i>
+                <md-tooltip>Ajouter {{menu.player.name}}</md-tooltip>
+            </md-button>
+        </form>
+        <md-divider></md-divider>
+
+        <md-button class="md-primary" aria-label="Afficher/Masquer le menu" ng-click="appContent.toggleTab()">Fermer le
+            menu
+        </md-button>
+
+        <div flex></div>
+        <md-button class="md-warn" aria-label="Déconnexion" ng-click="app.logout()">
+            <md-tooltip>Se déconnecter</md-tooltip>
+            Déconnexion
+        </md-button>
+    </md-content>
+</md-sidenav>

@@ -1,0 +1,13 @@
+--echo --echo --echo --echo --echo --echo --echo --echo --echo --= ready for parse production end
+echo ..................................................................
+echo  
+
+echo ..................................................................echo ..................................................................echo ..--echo ..........................................se deploy
+cd ..
+echo ------------------------------echo ------echo ------------------------------echo ------echo ------------------------------echo ------echo ------------------------------echo ------echo ------------------------------echo ------echo ----------------------------ove public folder with grunt
+echo ------
+grunt clean:public
+echo ------
+echo Directory list : 
+echo ------
+ls -Glrth playersPrels -Glrth playersPrels -Glrth play..ls -Glrth playersPrels -Glrth playersPrels -Glrth play..ls -Glrth playersPrels -Glrth playersPrels ====ls -Glrth playersPrels -Glrth playersPrels - script from '.git/hooks/'

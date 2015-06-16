@@ -1,0 +1,23 @@
+<div class="fill">
+    <md-toolbar id="main-toolbar">
+        <md-button class="fa-button" aria-label="Menu" id="menu-icon" ng-click="appContent.toggleTab()">
+            <!--<img src="images/favicon-194x194.png"/>-->
+            <i class="fa fa-bars"></i>
+        </md-button>
+        <div>
+            {{appContent.title}}
+        </div>
+    </md-toolbar>
+    <div class="fill" layout="column">
+        <!--<md-toolbar class="main-toolbar" layout="row">
+        <md-button class="fa-button" aria-label="Menu" id="menu-icon" ng-click="appContent.toggleTab()">
+        <img src="images/favicon-194x194.png" />
+    </md-button>
+            <h2 class="md-toolbar-tools" flex>
+        <span>{{appContent.currentPage.title}}</span>
+        </h2>
+        </md-toolbar>-->
+        <md-content id="page-content" flex ng-view></md-content>
+    </div>
+    <menu></menu>
+</div>

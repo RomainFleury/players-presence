@@ -1,0 +1,16 @@
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+node_modules
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# Logs
+logs
+*.log
+
+# built files, no needs to save them on git.
+public/
+
+# bower gotten files
+public_dev/scripts/libs/bower_components/*

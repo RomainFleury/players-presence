@@ -15,7 +15,7 @@ Parse.initialize("pR9yHrpHVf7fYwsVqNwXugMbkWuR36M0i9MEWrHg", "bJmkwi3oQIpF8glhjs
 
     "use strict";
 
-    angular.module("playersPresence", ["ngRoute", "ngAnimate", "ngMaterial", "players", "UsersServices"]);
+    angular.module("playersPresence", ["ngRoute", "ngAnimate", "ngMaterial", "players", "UsersServices", "TplCache"]);
     angular.module("playersPresence").config(["$routeProvider", "$mdThemingProvider", "UserProvider",
         function ($routeProvider, $mdThemingProvider, UserProvider) {
             $mdThemingProvider.theme("default")

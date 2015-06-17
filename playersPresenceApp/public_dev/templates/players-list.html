@@ -20,7 +20,6 @@
                 <md-grid-tile ng-repeat="player in playersList.Players"
                               ng-class="{'notpresent':!player.present, 'present':player.present,'noresponse':player.noresponse, 'changing':player.changing}"
                               ng-click="playersList.togglePresence(player)"
-
                               md-ink-ripple="true"
                         >
                     <h3>{{player.name}}<br>

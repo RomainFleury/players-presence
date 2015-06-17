@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "1.4.2"
+  },
+  "applications": {
+    "_default": {
+      "link": "presence"
+    },
+    "presence": {
+      "applicationId": "pR9yHrpHVf7fYwsVqNwXugMbkWuR36M0i9MEWrHg",
+      "masterKey": "xg9GAGfEeRX0TvSIwIj4HKtP6MG7tNXFTOtWu6yx"
+    }
+  }
+}

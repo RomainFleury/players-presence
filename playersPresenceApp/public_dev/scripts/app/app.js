@@ -86,4 +86,5 @@ Parse.initialize("pR9yHrpHVf7fYwsVqNwXugMbkWuR36M0i9MEWrHg", "bJmkwi3oQIpF8glhjs
         };
     });
 
+  Parse.serverURL = 'https://parseapi.back4app.com'
 })();
